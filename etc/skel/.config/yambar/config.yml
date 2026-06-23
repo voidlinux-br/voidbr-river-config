@@ -1,9 +1,84 @@
 bar:
-  height: 26
+  height: 38
   location: top
-  background: 1e1e2eff
-  foreground: cdd6f4ff
+  background: 1a1b26ff
+  foreground: c0caf5ff
+  font: "JetBrainsMono Nerd Font Mono:size=12"
+
+  left:
+    - label:
+        content:
+          - string:
+              text: "  "
+              foreground: 7aa2f7ff
+
+          - string:
+              text: "VOIDBR"
+              foreground: c0caf5ff
+
+  center:
+    - clock:
+        time-format: "%H:%M"
+        date-format: "%A %d %B"
+        content:
+          - string:
+              text: "󰥔 "
+              foreground: bb9af7ff
+
+          - string:
+              text: "{time}"
+              foreground: ffffffff
+
+          - string:
+              text: "  •  "
+              foreground: 565f89ff
+
+          - string:
+              text: "{date}"
+              foreground: 9ece6aff
+
   right:
+
+    - cpu:
+        poll-interval: 2000
+        content:
+          map:
+            conditions:
+              id == 0:
+                - string:
+                    text: "󰍛 CPU "
+                    foreground: 7dcfffff
+
+                - string:
+                    text: "{cpu}%"
+                    foreground: ffffffff
+
+    - label:
+        content:
+          - string:
+              text: "  |  "
+              foreground: 565f89ff
+
+    - mem:
+        poll-interval: 2000
+        content:
+          - string:
+              text: "󰾆 RAM "
+              foreground: bb9af7ff
+
+          - string:
+              text: "{used}M"
+              foreground: ffffffff
     - clock:
         content:
-          - string: { text: "{time:%Y-%m-%d  %H:%M}" }
+          - string: {text: "🕒 ", font: "Font Awesome 6 Free:style=solid:size=12"}
+          - string: {text: "{date}", right-margin: 5}
+          - string: {text: "⏰ ", font: "Font Awesome 6 Free:style=solid:size=12"}
+          - string: {text: "{time}"}
+
+
+
+
+
+
+
