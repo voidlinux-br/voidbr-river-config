@@ -1,3 +1,3 @@
-# voidbr-pkgfile
+# voidbr-river-config
 
-Template for VoidBR pkgmake/pkgfile packages
+Skel config for VoidBR River Meta Package 

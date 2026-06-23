@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Keyboard layout
+riverctl keyboard-layout us
+
+# Terminal (XFCE Terminal)
+riverctl map normal Super Return spawn xfce4-terminal
+
+# Close focused window
+riverctl map normal Super Q close
+
+# App launcher
+riverctl map normal Super D spawn fuzzel
+
+# File manager
+riverctl map normal Super E spawn thunar
+
+# Start status bar
+yambar &
+
+# Background color (dark)
+riverctl background-color 0x1e1e2e

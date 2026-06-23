@@ -1,0 +1,9 @@
+bar:
+  height: 26
+  location: top
+  background: 1e1e2eff
+  foreground: cdd6f4ff
+  right:
+    - clock:
+        content:
+          - string: { text: "{time:%Y-%m-%d  %H:%M}" }
